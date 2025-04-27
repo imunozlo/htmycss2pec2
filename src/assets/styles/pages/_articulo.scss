@@ -1,0 +1,72 @@
+@layer pages {
+  .articulo {
+    &__titulo {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: bold;
+      color: $color-primary;
+    }
+
+    &__autor {
+      font-size: 0.9rem;
+      color: $color-text;
+    }
+
+    &__subtitulo {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: $color-primary-dark;
+      margin-bottom: $gap;
+    }
+
+    &__lista {
+      li {
+        font-size: 1rem;
+        padding: 0.75rem;
+
+
+        &:is(:nth-child(odd)) {
+          background-color: color.adjust($color-primary, $lightness: 45%);
+        }
+      }
+    }
+
+    blockquote {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: $color-primary;
+      margin: 2rem 0;
+      padding: 1rem;
+      background-color: $color-bg;
+      border-left: 4px solid $color-primary;
+    }
+
+
+    section:has(blockquote) {
+      background-color: color.scale($color-bg, $lightness: -10%);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+
+    @container (max-width: 600px) {
+      &__titulo {
+        font-size: 2rem;
+      }
+
+      &__subtitulo {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      &__subtitulo {
+        text-align: center;
+      }
+
+      &__lista {
+        li {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

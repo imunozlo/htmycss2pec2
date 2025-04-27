@@ -1,0 +1,21 @@
+body {
+  font-family: $font-base;
+  background: $color-bg;
+  color: $color-text;
+  line-height: 1.5;
+}
+
+.skiplink {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  background: $color-primary;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 100;
+  transition: top 0.3s ease;
+
+  &:focus {
+    top: 0;
+  }
+}

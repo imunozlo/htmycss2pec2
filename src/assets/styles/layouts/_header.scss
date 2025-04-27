@@ -1,0 +1,47 @@
+.header {
+  background: $color-primary;
+  padding: $gap;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+    img {
+      display: block;
+      width: 3rem;
+      height: auto;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin: 0;
+  }
+
+  &__nav {
+    flex: 0 0 auto;
+    ul {
+      display: flex;
+      list-style: none;
+      gap: $gap;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

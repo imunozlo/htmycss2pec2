@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto – Jornadas Economía Circular</title>
+  <link rel="stylesheet" href="./assets/styles/main.scss" />
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <a href="#main" class="skiplink">Saltar al contenido principal</a>
+  <include src="./views/header.html"></include>
+  <main id="main" class="contacto">
+    <h2 class="contacto__headline">¡Hablemos!</h2>
+    <p class="contacto__intro">
+      ¿Tienes dudas o quieres colaborar? Escríbenos y te responderemos lo antes posible.
+    </p>
+
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contacto__form">
+      <input type="hidden" name="form-name" value="contacto" />
+      <p class="contacto__hidden">
+        <label>Si eres un bot, deja este campo en blanco: <input name="bot-field" /></label>
+      </p>
+
+      <div class="contacto__field">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+
+      <div class="contacto__field">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="contacto__field">
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto" name="asunto" required />
+      </div>
+
+      <div class="contacto__field contacto__field--textarea">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary contacto__submit">
+        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+        Enviar mensaje
+      </button>
+
+
+      <div class="contacto__thanks" hidden>
+        <p>¡Gracias! Tu mensaje ha sido enviado.</p>
+      </div>
+    </form>
+  </main>
+  <include src="./views/footer.html"></include>
+  <script>
+    const form = document.querySelector('.contacto__form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+        .then(() => {
+          form.reset();
+          form.querySelector('.contacto__thanks').hidden = false;
+        })
+        .catch(err => alert('Error al enviar: ' + err));
+    });
+  </script>
+</body>
+
+</html>

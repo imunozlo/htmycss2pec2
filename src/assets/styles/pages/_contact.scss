@@ -1,0 +1,107 @@
+
+.contacto {
+  max-width: 36rem;
+  margin: 5svh auto $gap;
+  padding: 0 5svw;
+
+  &__headline {
+    font-size: clamp(1.75rem, 4svw, 2.5rem);
+    text-align: center;
+    margin-bottom: $gap;
+    color: oklch(60% 0.2 160);
+  }
+
+  &__intro {
+    text-align: center;
+    margin-bottom: $gap * 1.5;
+    color: $color-text;
+  }
+
+  &__form {
+    display: grid;
+    gap: $gap;
+    container-type: inline-size;
+
+
+    @container (min-width: 400px) {
+      grid-template-columns: 1fr 1fr;
+
+      & > .contacto__field {
+        &:nth-child(-n+2) {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+
+  &__hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    width: 90cqw;
+    max-width: 100%;
+
+    label {
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+      font-family: $font-base;
+    }
+
+    input,
+    textarea {
+      padding: 0.5rem;
+      border: 1px solid color.adjust($color-bg, $lightness: -20%);
+      border-radius: 0.5rem;
+      font-family: $font-base;
+      font-size: 1rem;
+      background-color: $color-bg;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:focus {
+        border-color: $color-primary;
+        outline: none;
+        box-shadow: 0 0 0 3px color-mix(in srgb, $color-primary 30%, transparent);
+      }
+    }
+
+    &--textarea {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__submit {
+    grid-column: 1 / -1;
+    justify-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: $color-primary;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+
+  &__thanks {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: $color-primary-dark;
+    font-weight: bold;
+    margin-top: 4svh;
+  }
+}

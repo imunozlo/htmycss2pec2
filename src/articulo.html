@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artículo – Jornadas Economía Circular</title>
+  <link rel="stylesheet" href="./assets/styles/main.scss" />
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <a href="#main" class="skiplink">Saltar al contenido principal</a>
+  <include src="./views/header.html"></include>
+
+  <main id="main" class="articulo container py-5">
+    <header class="text-center mb-5">
+      <img src="./assets/images/articulo1.webp" class="img-fluid mb-3" alt="Imagen del artículo">
+      <h1 class="articulo__titulo">La economía circular como motor de cambio</h1>
+      <p class="articulo__autor">Por Marta Sánchez</p>
+    </header>
+
+    <section class="row">
+      <div class="col-md-6 mb-4">
+        <h2 class="articulo__subtitulo">¿Qué es la economía circular?</h2>
+        <p>La economía circular propone un cambio de modelo hacia una economía sostenible, basada en el principio de "cerrar el ciclo de vida" de los productos, servicios y residuos.</p>
+        <p>Este modelo se centra en reducir el consumo de recursos naturales, fomentar la eficiencia y promover el reciclaje y la reutilización.</p>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <img src="./assets/images/articulo2.webp" class="img-fluid rounded shadow-sm" alt="Foto explicativa">
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">"La economía circular no es solo reciclar, es repensar el sistema."</p>
+        <footer class="blockquote-footer">Fundación Ellen MacArthur</footer>
+      </blockquote>
+    </section>
+
+    <section class="row">
+      <div class="col-md-6 mb-4 order-md-2">
+        <h2 class="articulo__subtitulo">Beneficios para el medio ambiente</h2>
+        <p>Adoptar estrategias circulares permite reducir la presión sobre los recursos naturales, disminuir la generación de residuos y combatir el cambio climático de manera efectiva.</p>
+        <p>Además, ayuda a la regeneración de los ecosistemas y promueve un uso más equitativo de los recursos a nivel global.</p>
+      </div>
+
+      <div class="col-md-6 mb-4 order-md-1">
+        <img src="./assets/images/articulo3.jpeg" class="img-fluid rounded shadow-sm" alt="Foto beneficios">
+      </div>
+    </section>
+
+    <section class="mt-5">
+      <h2 class="articulo__subtitulo">Resumen de acciones</h2>
+      <ul class="list-group list-group-flush articulo__lista">
+        <li class="list-group-item">Reducir el uso de recursos no renovables</li>
+        <li class="list-group-item">Promover la reutilización y reparación</li>
+        <li class="list-group-item">Fomentar el reciclaje de materiales</li>
+      </ul>
+    </section>
+  </main>
+
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script>
+</body>
+</html>

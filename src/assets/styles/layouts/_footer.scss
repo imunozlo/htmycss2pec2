@@ -1,0 +1,94 @@
+.footer {
+  background: $color-primary;
+  color: #fff;
+  padding: $gap 0;
+
+  &__contact {
+    text-align: center;
+    font-size: 0.9rem;
+    padding-bottom: $gap;
+
+    p {
+      margin: 0.25rem 0;
+    }
+  }
+
+  &__divider {
+    margin: $gap auto 0;
+    border: none;
+    border-top: 1px solid rgba(#fff, 0.3);
+    width: 80%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $gap;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+
+    img {
+      display: block;
+      width: 3rem;
+      height: auto;
+    }
+
+    .footer__brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    text-align: center;
+
+    ul {
+      display: inline-flex;
+      list-style: none;
+      gap: $gap;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__social {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 0.5rem;
+
+    a {
+      display: inline-block;
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: #fff;
+      }
+    }
+  }
+
+  &__legal {
+    text-align: center;
+    margin-top: $gap;
+    font-size: 0.75rem;
+    color: rgba(#fff, 0.7);
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "plugins": ["stylelint-order"],
+  "extends": ["stylelint-config-recommended-scss"],
+  "rules": {
+    "selector-class-pattern": "^[a-z]([a-z0-9]*)(__[a-z0-9]+)?(--[a-z0-9]+)?$",
+    "color-function-notation": "modern",
+    "alpha-value-notation": "number",
+    "function-url-quotes": "always",
+    "no-descending-specificity": null,
+    "selector-max-id": 0,
+    "selector-no-qualifying-type": [true, { "ignore": ["class"] }],
+    "scss/dollar-variable-pattern": "^[a-z][a-z0-9-]+$",
+    "scss/at-mixin-pattern": "^[a-z][a-z0-9-]+$",
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "include"
+      },
+      {
+        "type": "at-rule",
+        "name": "media"
+      }
+    ]
+  }
+}

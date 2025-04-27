@@ -1,27 +1,52 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jornadas Economía Circular</title>
+  <link rel="stylesheet" href="./assets/styles/main.scss"/>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <a href="#main" class="skiplink">Saltar al contenido principal</a>
+  <include src="./views/header.html"></include>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+
+  <main id="main" class="home__grid-poster">
+    <div class="home__banner">
+      <img src="assets/images/imagen-portada.png" alt="Portada Jornadas Economía Circular">
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+
+    <div class="home__title">
+      <h1>Un futuro sostenible</h1>
+    </div>
+
+    <div class="home__description">
+      <p>Charlas • Talleres • Cursos <br> Hacia una economía circular</p>
+    </div>
+
+    <div class="home__date">
+      <p>2–3–4 Mayo 2025<br>Auditorio Municipal</p>
+    </div>
+
+    <div class="home__cta">
+      <a href="./participantes.html" class="btn btn-primary">Ver Programa</a>
+    </div>
+
+    <div class="home__graphic">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#2a7f62" stroke-width="8" />
+        <path d="M100,60 A40,40 0 0,1 60,100" fill="none" stroke="#2a7f62" stroke-width="6" marker-end="url(#arr)"/>
+        <defs>
+          <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#2a7f62" />
+          </marker>
+        </defs>
+      </svg>
+    </div>
+  </main>
+
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,15 @@
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: $color-primary;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  transition: background-color 0.3s ease;
+
+
+  &:hover {
+    background: $color-primary-dark;
+  }
+}

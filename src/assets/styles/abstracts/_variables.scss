@@ -9,4 +9,27 @@ $uoc-corporate: #000078;
 $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
-$mqMinWidth: 420px;
+
+$mq-min-width: 420px;
+
+
+// Colores
+$color-primary: #2a7f62;
+$color-primary-dark: #245c48;
+$color-bg:    #f0f0f0;
+$color-text:  #333;
+
+// Tipografías
+$font-base:  'Montserrat', sans-serif;
+
+// Espaciados
+$gap: 1rem;
+
+// Personalización de Bootstrap
+$card-border-radius: 1rem;
+$btn-primary-color: #ffffff;
+$btn-primary-bg: #2a7f62;
+$badge-font-size: 0.85rem;
+
+
+
