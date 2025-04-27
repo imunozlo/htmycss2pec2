@@ -17,8 +17,7 @@
     <p class="contacto__intro">
       ¿Tienes dudas o quieres colaborar? Escríbenos y te responderemos lo antes posible.
     </p>
-
-    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contacto__form">
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias" class="contacto__form">
       <input type="hidden" name="form-name" value="contacto" />
       <p class="contacto__hidden">
         <label>Si eres un bot, deja este campo en blanco: <input name="bot-field" /></label>
@@ -60,7 +59,7 @@
     const form = document.querySelector('.contacto__form');
     form.addEventListener('submit', e => {
       e.preventDefault();
-      fetch('/', {
+      fetch(location.pathname, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(new FormData(form)).toString()
@@ -72,6 +71,7 @@
         .catch(err => alert('Error al enviar: ' + err));
     });
   </script>
+
 </body>
 
 </html>
